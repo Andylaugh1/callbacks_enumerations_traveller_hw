@@ -55,6 +55,15 @@ return totalDistanceTravelled;
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
 
+  const filteredTransport = [];
+  const modesOfTransport = this.getModesOfTransport();
+  modesOfTransport.forEach((mode) => {
+    if (filteredTransport.includes(mode) == false){
+      filteredTransport.push(mode);
+    }
+
+  })
+  return filteredTransport;
 };
 
 
