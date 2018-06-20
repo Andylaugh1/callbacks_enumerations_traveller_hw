@@ -19,6 +19,11 @@ Traveller.prototype.getJourneyEndLocations = function () {
 };
 
 Traveller.prototype.getModesOfTransport = function () {
+  const modesOfTransportArray = this.journeys.map((journey) => {
+    return journey.transport;
+  })
+
+  return modesOfTransportArray;
 
 };
 
